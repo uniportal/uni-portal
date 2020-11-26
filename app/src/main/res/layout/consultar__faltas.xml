@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Consultar_Faltas">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginBottom="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Minhas Faltas"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:gravity="center"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_margin="10dp">
+
+
+
+            <TextView
+                android:id="@+id/document"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="Nome Aluno"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintStart_toEndOf="@+id/item_Num_notas"
+                app:layout_constraintTop_toTopOf="@+id/item_Num_notas" />
+
+
+            <LinearLayout
+                android:id="@+id/Layout_N_faltas1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/document"
+                app:layout_constraintTop_toBottomOf="@+id/document"
+                >
+                <TextView
+                    android:id="@+id/Projeto_Integrado_Faltas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Projeto Integrado"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/Text_M2_NF1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº Faltas:"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/NF1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    />
+
+
+            </LinearLayout>
+
+            <!--N faltas 2-->
+
+            <LinearLayout
+                android:id="@+id/Layout_N_faltas2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/Layout_N_faltas1"
+                app:layout_constraintTop_toBottomOf="@+id/Layout_N_faltas1"
+                >
+                <TextView
+                    android:id="@+id/Arquitetura_De_Software_faltas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arquitetura De Software"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/Text_M2_NF2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº Faltas:"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/NF2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <!--N faltas 3-->
+
+            <LinearLayout
+                android:id="@+id/Layout_N_faltas3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/Layout_N_faltas2"
+                app:layout_constraintTop_toBottomOf="@+id/Layout_N_faltas2"
+                >
+                <TextView
+                    android:id="@+id/Dispositivos_Moveis_faltas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dispositivos Moveis"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/Text_M3_NF3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº Faltas:"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/NF3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <!--N faltas 4-->
+
+            <LinearLayout
+                android:id="@+id/Layout_N_faltas4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/Layout_N_faltas3"
+                app:layout_constraintTop_toBottomOf="@+id/Layout_N_faltas3"
+                >
+                <TextView
+                    android:id="@+id/Sistemas_Distribuidos_faltas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sistemas Distribuidos"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+                <TextView
+                    android:id="@+id/Text_M4_NF3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº Faltas:"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/NF4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+            <!--N faltas 5-->
+
+            <LinearLayout
+                android:id="@+id/Layout_N_faltas5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/Layout_N_faltas4"
+                app:layout_constraintTop_toBottomOf="@+id/Layout_N_faltas4"
+                >
+
+                <TextView
+                    android:id="@+id/Qualidade_De_Testes_faltas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qualidade De Testes"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    />
+
+
+
+
+                <TextView
+                    android:id="@+id/Text_M5_NF5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nº Faltas:"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/NF5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cadastro_Faltas">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/bgforapp"
+        >
+    </ImageView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:src="@drawable/faltas"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="30dp"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/fundo_login"
+                android:layout_marginTop="50dp"
+                android:paddingBottom="70dp"
+                >
+
+                <TextView
+                    android:id="@+id/Titulo_Cadastro_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Cadastro Faltas"
+                    android:textColor="@color/colorCiano"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/text_Nome_Aluno_F"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nome"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="30dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/Titulo_Cadastro_Faltas"
+                    />
+
+                <EditText
+                    android:id="@+id/input_NomeAluno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_Nome_Aluno_F"
+                    android:hint="Nome Do Aluno:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+                <!-- Faltas Materia 1 -->
+
+                <TextView
+                    android:id="@+id/text_materia1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Materia 1"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/input_NomeAluno"
+                    />
+
+                <EditText
+                    android:id="@+id/input_Materia1_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_materia1"
+                    android:hint="Numero de Faltas:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+
+                <View
+                    android:id="@+id/Divisor_Materia1_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toBottomOf="@id/input_Materia1_Faltas" />
+
+                <!-- Faltas Materia 2 -->
+
+                <TextView
+                    android:id="@+id/text_materia2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Materia 2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/Divisor_Materia1_Faltas"
+                    />
+
+                <EditText
+                    android:id="@+id/input_Materia2_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_materia2"
+                    android:hint="Numero de Faltas:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+
+                <View
+                    android:id="@+id/Divisor_Materia2_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toBottomOf="@id/input_Materia2_Faltas" />
+
+                <!-- Faltas Materia 3 -->
+
+                <TextView
+                    android:id="@+id/text_materia3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Materia 3"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/Divisor_Materia2_Faltas"
+                    />
+
+                <EditText
+                    android:id="@+id/input_Materia3_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_materia3"
+                    android:hint="Numero de Faltas:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+
+                <View
+                    android:id="@+id/Divisor_Materia3"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toBottomOf="@id/input_Materia3_Faltas" />
+
+
+
+                <!-- Faltas Materia 4 -->
+
+                <TextView
+                    android:id="@+id/text_materia4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Materia 4"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/Divisor_Materia3"
+                    />
+
+                <EditText
+                    android:id="@+id/input_Materia4_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_materia4"
+                    android:hint="Numero de Faltas:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+
+                <View
+                    android:id="@+id/Divisor_Materia4"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toBottomOf="@id/input_Materia4_Faltas" />
+
+                <!-- Faltas Materia 5 -->
+
+                <TextView
+                    android:id="@+id/text_materia5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Materia 5"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="40dp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/Divisor_Materia4"
+                    />
+
+                <EditText
+                    android:id="@+id/input_Materia5_Faltas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/borda_retangulo"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/text_materia5"
+                    android:hint="Numero de Faltas:"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:paddingStart="40dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBlack" />
+
+
+                <View
+                    android:id="@+id/Divisor_Materia5"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:layout_constraintTop_toBottomOf="@id/input_Materia5_Faltas" />
+
+
+
+
+                  <Button
+                      android:id="@+id/btn_cadastrar_faltas"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      app:layout_constraintTop_toBottomOf="@id/Divisor_Materia5"
+                      android:background="@drawable/btn_azul"
+                      android:layout_marginTop="50dp"
+                      android:layout_marginStart="30dp"
+                      android:layout_marginEnd="30dp"
+                      android:text="Inserir"
+                      android:textSize="20sp"
+                      android:textStyle="bold"
+                      android:textColor="@color/colorPrimary"
+                      />
+
+                <!--Botão Voltar-->
+                <Button
+                    android:id="@+id/btn_cadastrar_faltas_voltar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/btn_cadastrar_faltas"
+                    android:background="@drawable/btn_azul"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:text="Voltar"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
