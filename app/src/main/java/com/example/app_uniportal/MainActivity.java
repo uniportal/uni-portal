@@ -12,6 +12,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app_uniportal.bussiness.login.control.Login_Professor;
+import com.example.app_uniportal.bussiness.login.control.Login_aluno;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView icon_Capa;

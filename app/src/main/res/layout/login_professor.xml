@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login_Professor">
+    tools:context=".bussiness.login.control.Login_Professor">
 
     <ImageView
         android:id="@+id/imagem_topo"

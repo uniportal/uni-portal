@@ -24,8 +24,8 @@
         <activity android:name=".Painel_professor" />
         <activity android:name=".Tela_Blackboard" />
         <activity android:name=".Painel_Aluno" />
-        <activity android:name=".Login_Professor" />
-        <activity android:name=".Login_aluno" />
+        <activity android:name=".bussiness.login.control.Login_Professor" />
+        <activity android:name=".bussiness.login.control.Login_aluno" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
