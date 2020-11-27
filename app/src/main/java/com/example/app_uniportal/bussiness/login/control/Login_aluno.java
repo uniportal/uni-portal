@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,7 +30,9 @@ import java.io.IOException;
 public class Login_aluno extends AppCompatActivity {
     EditText inputusuario, inputsenha;
     Button btn_aluno_entrar;
+
     OkHttpClient client = new OkHttpClient();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,9 +42,6 @@ public class Login_aluno extends AppCompatActivity {
         inputsenha = (EditText) findViewById(R.id.inputsenha);
         btn_aluno_entrar = (Button) findViewById(R.id.btn_aluno_entrar);
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
         btn_aluno_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +49,8 @@ public class Login_aluno extends AppCompatActivity {
                     JSONObject authRequest = new JSONObject();
                     authRequest.put("login", inputusuario.getText().toString());
                     authRequest.put("password", inputsenha.getText().toString());
-                    Authenticated authSession = new Gson().fromJson(authenticate("http://ff8697185340.ngrok.io/authenticate", authRequest).toString(), Authenticated.class);
+
+                    Authenticated authSession = new Gson().fromJson(authenticate("http://4041496c62b0.ngrok.io/authenticate", authRequest), Authenticated.class);
                     if (authSession != null) {
                         SharedPreferences sharedpreferences = getSharedPreferences("user_session", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();
@@ -70,21 +69,21 @@ public class Login_aluno extends AppCompatActivity {
 
     }
 
-    private JSONObject authenticate(String url, JSONObject json) throws IOException {
-        JSONObject authenticated = new JSONObject();
+    private String authenticate(String url, JSONObject json) throws IOException {
         Request.Builder builder = new Request.Builder();
         builder.url(url);
         MediaType mediaType = MediaType.parse("application/json; charset=utf-8");
         RequestBody body = RequestBody.create(mediaType, json.toString());
         builder.post(body);
         Request request = builder.build();
-        Response response = client.newCall(request).execute();
+        Response response;
         try {
-            authenticated = new JSONObject(response.body().toString());
-        } catch (JSONException e) {
+            response = client.newCall(request).execute();
+            return response.body().string();
+        } catch (IOException e) {
             e.printStackTrace();
         }
-        return authenticated;
+        return null;
     }
 
     private void alert(String s) {
