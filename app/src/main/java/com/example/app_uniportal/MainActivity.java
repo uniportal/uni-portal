@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.app_uniportal.bussiness.login.control.Login_Professor;
-import com.example.app_uniportal.bussiness.login.control.Login_aluno;
+import com.example.app_uniportal.bussiness.authentication.control.AuthenticateStudent;
+import com.example.app_uniportal.bussiness.authentication.control.AuthenticateTeacher;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,13 +77,13 @@ SouProfessor.setOnClickListener(new View.OnClickListener() {
 
 
     private void SouProfessorOpen() {
-        startActivity(new Intent(MainActivity.this, Login_Professor.class));
+        startActivity(new Intent(MainActivity.this, AuthenticateTeacher.class));
 
     }
 
 
     private void SouAlunoOpen() {
-        startActivity(new Intent(MainActivity.this, Login_aluno.class));
+        startActivity(new Intent(MainActivity.this, AuthenticateStudent.class));
     }
 
 

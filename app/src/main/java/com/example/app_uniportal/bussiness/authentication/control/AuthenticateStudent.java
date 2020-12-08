@@ -1,4 +1,4 @@
-package com.example.app_uniportal.bussiness.login.control;
+package com.example.app_uniportal.bussiness.authentication.control;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.app_uniportal.Painel_Aluno;
 import com.example.app_uniportal.R;
-import com.example.app_uniportal.bussiness.login.entity.Authenticated;
+import com.example.app_uniportal.bussiness.authentication.entity.Authenticated;
 import com.google.gson.Gson;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.OkHttpClient;
@@ -27,7 +27,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 
-public class Login_aluno extends AppCompatActivity {
+public class AuthenticateStudent extends AppCompatActivity {
     EditText inputusuario, inputsenha;
     Button btn_aluno_entrar;
 
@@ -50,13 +50,14 @@ public class Login_aluno extends AppCompatActivity {
                     authRequest.put("login", inputusuario.getText().toString());
                     authRequest.put("password", inputsenha.getText().toString());
 
-                    Authenticated authSession = new Gson().fromJson(authenticate("http://4041496c62b0.ngrok.io/authenticate", authRequest), Authenticated.class);
+                    Authenticated authSession = new Gson().fromJson(authenticate("http://10.0.2.2:8080/authenticate", authRequest), Authenticated.class);
                     if (authSession != null) {
                         SharedPreferences sharedpreferences = getSharedPreferences("user_session", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedpreferences.edit();
                         editor.putString("document", authSession.getDocument());
+                        editor.putString("name", authSession.getName());
                         editor.commit();
-                        startActivity(new Intent(Login_aluno.this, Painel_Aluno.class));
+                        startActivity(new Intent(AuthenticateStudent.this, Painel_Aluno.class));
                     } else {
                         alert("Login ou senha incorretas. Tente novamente!");
                     }

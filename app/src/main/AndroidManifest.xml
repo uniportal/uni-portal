@@ -14,18 +14,18 @@
         <activity android:name=".Consultar_Mensalidade"></activity>
         <activity android:name=".Consultar_Atividades" />
         <activity android:name=".Consultar_Faltas" />
-        <activity android:name=".Consultar_Notas" />
+        <activity android:name=".bussiness.grades.control.GradesDetails" />
         <activity android:name=".Lista_faltas" />
-        <activity android:name=".Lista_Notas" />
+        <activity android:name=".bussiness.grades.control.GradesListing" />
         <activity android:name=".Lista_Atividade" />
         <activity android:name=".Cadastro_Faltas" />
-        <activity android:name=".Cadastro_Notas" />
+        <activity android:name=".bussiness.grades.control.GradesEdit" />
         <activity android:name=".Cadastro_Atividade" />
         <activity android:name=".Painel_professor" />
         <activity android:name=".Tela_Blackboard" />
         <activity android:name=".Painel_Aluno" />
-        <activity android:name=".bussiness.login.control.Login_Professor" />
-        <activity android:name=".bussiness.login.control.Login_aluno" />
+        <activity android:name=".bussiness.authentication.control.AuthenticateTeacher" />
+        <activity android:name=".bussiness.authentication.control.AuthenticateStudent" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

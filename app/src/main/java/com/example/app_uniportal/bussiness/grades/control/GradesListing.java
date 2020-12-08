@@ -1,4 +1,4 @@
-package com.example.app_uniportal;
+package com.example.app_uniportal.bussiness.grades.control;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Lista_Notas extends AppCompatActivity {
+import com.example.app_uniportal.R;
+
+public class GradesListing extends AppCompatActivity {
 
     Button btn_Add_nova_nota;
 
@@ -28,7 +30,7 @@ public class Lista_Notas extends AppCompatActivity {
     }
 
     private void AbrirNovaNota() {
-        startActivity(new Intent(Lista_Notas.this, Cadastro_Notas.class));
+        startActivity(new Intent(GradesListing.this, GradesEdit.class));
 
     }
 }

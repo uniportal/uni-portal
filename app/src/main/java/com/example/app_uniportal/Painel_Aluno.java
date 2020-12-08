@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app_uniportal.bussiness.grades.control.GradesDetails;
+
 public class Painel_Aluno extends AppCompatActivity {
 
     TextView btn_acessar;
@@ -85,7 +87,7 @@ public class Painel_Aluno extends AppCompatActivity {
 
 
     private void AbrirNotas() {
-        startActivity(new Intent(Painel_Aluno.this, Consultar_Notas.class));
+        startActivity(new Intent(Painel_Aluno.this, GradesDetails.class));
 
     }
 

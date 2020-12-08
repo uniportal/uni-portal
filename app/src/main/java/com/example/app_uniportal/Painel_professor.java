@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.app_uniportal.bussiness.grades.control.GradesListing;
+
 public class Painel_professor extends AppCompatActivity {
 
     Button btn_add_ativ,btn_add_nota,btn_add_faltas;
@@ -56,7 +58,7 @@ public class Painel_professor extends AppCompatActivity {
     }
 
     private void AbrirListaNotas() {
-        startActivity(new Intent(Painel_professor.this, Lista_Notas.class));
+        startActivity(new Intent(Painel_professor.this, GradesListing.class));
 
     }
 

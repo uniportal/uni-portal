@@ -1,4 +1,4 @@
-package com.example.app_uniportal.bussiness.login.entity;
+package com.example.app_uniportal.bussiness.authentication.entity;
 
 public class Authenticated {
     private String login;
